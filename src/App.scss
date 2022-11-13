@@ -1,3 +1,15 @@
+@use "sass:meta";
+
+@layer reset, general;
+
+@layer reset {
+    @include meta.load-css("styles/normalize");
+}
+
+@layer general {
+    @include meta.load-css("styles/general");
+}
+
 .App-header {
     background-color: #282c34;
     min-height: 10vh;
