@@ -11,12 +11,14 @@
 }
 
 :root {
+    --canvas-bg-color: #fbfcfc;
+    --primary-color: #f0b111;
+    --text-color: #1c2833;
     --default-padding: 1rem;
 }
 
 header.App-header {
     background-color: #282c34;
-    min-height: 10vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,6 +26,6 @@ header.App-header {
 
     h1 {
         color: white;
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 }

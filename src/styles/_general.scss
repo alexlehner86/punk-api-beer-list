@@ -1,6 +1,8 @@
 /** General styles that are grouped in the cascade layer "general" */
 
 body {
+    background-color: #f5f5f5;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239e9e9c' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     margin: 0;
     padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
@@ -19,10 +21,12 @@ h3,
 h4,
 h5,
 h6 {
+    color: var(--text-color);
     font-weight: bold;
     margin: 0.7em 0;
 }
 
 p {
+    color: var(--text-color);
     margin: 1em 0;
 }

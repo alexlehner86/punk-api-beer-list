@@ -1,9 +1,12 @@
 hgroup.heading {
+    border-bottom: 0.125rem solid black;
     color: white;
-    background: darkgoldenrod;
+    background: var(--primary-color);
     padding: var(--default-padding);
 
     h2 {
+        color: black;
+        font-size: 1.6rem;
         letter-spacing: 0.025em;
         margin: 0 0 0.5em;
         text-transform: uppercase;
@@ -15,19 +18,20 @@ hgroup.heading {
     }
 }
 
-.container {
+.flexRow {
     display: flex;
     padding: var(--default-padding);
 
     img {
-        flex-shrink: 0;
         object-fit: contain;
         height: 14rem;
         width: 7rem;
+        margin-right: -2rem;
+        rotate: 4deg;
     }
 
     .description {
-        padding-right: var(--default-padding);
+        padding-right: 1.5rem;
 
         p {
             line-height: 1.4;
@@ -37,6 +41,10 @@ hgroup.heading {
         }
         p:last-child {
             margin-bottom: 0;
+        }
+
+        p.foodPairing span {
+            font-weight: bold;
         }
     }
 }

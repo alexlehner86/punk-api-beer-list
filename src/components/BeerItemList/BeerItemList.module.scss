@@ -1,15 +1,37 @@
 ul.beerGrid {
     display: grid;
-    gap: var(--default-padding);
+    gap: 2.5rem;
     grid-template-columns: repeat(3, minmax(15rem, 1fr));
     grid-template-rows: auto;
     list-style: none;
     max-width: min(90rem, 90vw);
-    margin: 1rem auto;
-    padding: 0;
+    margin: 2rem auto;
+    padding: 0 0.5rem;
+
+    @media screen and (max-width: 72rem) {
+        grid-template-columns: repeat(2, minmax(15rem, 1fr));
+    }
+    
+    @media screen and (max-width: 42rem) {
+        grid-template-columns: 1fr;
+    }
 
     li {
-        border: 1px solid black;
+        background: var(--canvas-bg-color);
+        border: 0.125rem solid black;
         border-radius: 0.25rem;
+        box-shadow: 10px 10px 15px -5px rgba(196, 149, 32, 0.7);
+    }
+}
+
+// Only apply subgrid styling in browsers that support feature (e.g. Firefox, Safari).
+// See: https://caniuse.com/css-subgrid
+@supports (grid-template-rows: subgrid) {
+    ul.beerGrid li {
+        display: grid;
+        // Align list item content with other grid items in the same row.
+        grid-template-rows: subgrid;
+        grid-row: span 2;
+        gap: 0;
     }
 }

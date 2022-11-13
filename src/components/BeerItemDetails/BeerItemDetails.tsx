@@ -12,11 +12,14 @@ const BeerItemDetails: FunctionComponent<BeerItemDetailsProps> = ({ item }): JSX
             <h2>{item.name}</h2>
             <p>{item.tagline}</p>
         </hgroup>
-        <div className={styles.container}>
+        <div className={styles.flexRow}>
             <div className={styles.description}>
                 <p>{item.description}</p>
                 {item.foodPairing?.length > 0 ? (
-                    <p>{item.foodPairing[0]}</p>
+                    <p className={styles.foodPairing}>
+                        🍴&nbsp;<span>Food Pairing: </span>
+                        {item.foodPairing[0]}
+                    </p>
                 ) : null}
             </div>
             <img src={item.imageUrl} alt=""></img>
