@@ -2,6 +2,7 @@ import './App.scss';
 
 import React, { useEffect, useState } from 'react';
 
+import BeerItemList from './components/BeerItemList/BeerItemList';
 import { BEERS_PER_PAGE, PUNK_API_URL } from './constants/app.constants';
 import { BeerItemResponse } from './models/beer-item.interface';
 import { BeerItem } from './models/beer-item.model';
@@ -29,7 +30,9 @@ const App = (): JSX.Element => {
                 <h1>Beer List</h1>
             </header>
             <main>
-                <p>{beerItems.length}</p>
+                {isLoaded ? (
+                    <BeerItemList items={beerItems} />
+                ) : <p>Loading beer items...</p>}
             </main>
         </>
     );
