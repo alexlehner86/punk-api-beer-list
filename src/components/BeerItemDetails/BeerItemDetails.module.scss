@@ -1,0 +1,42 @@
+hgroup.heading {
+    color: white;
+    background: darkgoldenrod;
+    padding: var(--default-padding);
+
+    h2 {
+        letter-spacing: 0.025em;
+        margin: 0 0 0.5em;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-style: italic;
+        margin: 0;
+    }
+}
+
+.container {
+    display: flex;
+    padding: var(--default-padding);
+
+    img {
+        flex-shrink: 0;
+        object-fit: contain;
+        height: 14rem;
+        width: 7rem;
+    }
+
+    .description {
+        padding-right: var(--default-padding);
+
+        p {
+            line-height: 1.4;
+        }
+        p:first-child {
+            margin-top: 0;
+        }
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

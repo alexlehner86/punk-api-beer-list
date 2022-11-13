@@ -1,5 +1,6 @@
-import { FunctionComponent } from "react";
-import { BeerItem } from "../../models/beer-item.model";
+import { FunctionComponent } from 'react';
+import { BeerItem } from '../../models/beer-item.model';
+import styles from './BeerItemDetails.module.scss';
 
 interface BeerItemDetailsProps {
     item: BeerItem;
@@ -7,15 +8,19 @@ interface BeerItemDetailsProps {
 
 const BeerItemDetails: FunctionComponent<BeerItemDetailsProps> = ({ item }): JSX.Element => (
     <>
-        <hgroup>
-            <h3>{item.name}</h3>
+        <hgroup className={styles.heading}>
+            <h2>{item.name}</h2>
             <p>{item.tagline}</p>
         </hgroup>
-        <img src={item.imageUrl} alt=""></img>
-        <p>{item.description}</p>
-        {item.foodPairing?.length > 0 ? (
-            <p>{item.foodPairing[0]}</p>
-        ) : null}
+        <div className={styles.container}>
+            <div className={styles.description}>
+                <p>{item.description}</p>
+                {item.foodPairing?.length > 0 ? (
+                    <p>{item.foodPairing[0]}</p>
+                ) : null}
+            </div>
+            <img src={item.imageUrl} alt=""></img>
+        </div>
     </>
 );
 
