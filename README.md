@@ -1,6 +1,8 @@
 # Punk API Beer List
 
-React demo that lists beers loaded from public [Punk API](https://punkapi.com/documentation/v2). This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React demo that lists beers loaded from public [Punk API](https://punkapi.com/documentation/v2). Check out the [live version on GitHub Pages](https://alexlehner86.github.io/punk-api-beer-list/).
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
