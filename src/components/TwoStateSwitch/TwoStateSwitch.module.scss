@@ -1,0 +1,68 @@
+.container {
+    --switch-border-radius: 0.75em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--switch-font-size, 1rem);
+    margin: 1em;
+
+    p {
+        font-size: 1em;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .switchWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: inherit;
+        margin-left: 1em;
+
+        button {
+            position: relative;
+            background: var(--canvas-bg-color);
+            border: 0.15em solid var(--light-black);
+            border-radius: 0;
+            font-size: 0.9em;
+            padding: 0.5em 0.85em;
+            transition: background-color 0.3s, color 0.3s;
+            z-index: 1;
+        }
+        button:first-of-type {
+            border-bottom-left-radius: var(--switch-border-radius);
+            border-top-left-radius: var(--switch-border-radius);
+        }
+        button:last-of-type {
+            border-bottom-right-radius: var(--switch-border-radius);
+            border-top-right-radius: var(--switch-border-radius);
+        }
+
+        button[aria-checked="true"] {
+            background: var(--light-black);
+            color: white;
+        }
+        button[aria-checked="true"]:after {
+            content: "";
+            position: absolute;
+            bottom: 0.2em;
+            top: 0.2em;
+        }
+        button[aria-checked="true"]:first-of-type:after {
+            right: 0.2em;
+            border-right: 0.3em solid var(--primary-color);
+        }
+        button[aria-checked="true"]:last-of-type:after {
+            left: 0.2em;
+            border-left: 0.3em solid var(--primary-color);
+        }
+
+        button:focus:not(:focus-visible) {
+            outline: none;
+        }
+        button:focus-visible {
+            outline: 0.25rem solid var(--primary-color-dark);
+            z-index: 2;
+        }
+    }
+}

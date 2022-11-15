@@ -1,7 +1,7 @@
 hgroup.heading {
     border-bottom: 0.125rem solid black;
     color: white;
-    background: var(--primary-color);
+    background: linear-gradient(45deg, #f9be29, #f0b111);
     padding: var(--default-padding);
 
     h2 {
@@ -26,6 +26,7 @@ hgroup.heading {
         object-fit: contain;
         height: 14rem;
         width: 7rem;
+        margin-top: 0.5rem;
         margin-right: -2rem;
         rotate: 4deg;
     }

@@ -13,12 +13,15 @@
 :root {
     --canvas-bg-color: #fbfcfc;
     --primary-color: #f0b111;
+    --primary-color-dark: #bd8a0a;
+    --light-black: #282c34;
     --text-color: #1c2833;
     --default-padding: 1rem;
+    --switch-font-size: 1.1rem;
 }
 
 header.App-header {
-    background-color: #282c34;
+    background-color: var(--light-black);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,4 +31,8 @@ header.App-header {
         color: white;
         font-size: 2rem;
     }
+}
+
+.App-loading-message {
+    text-align: center;
 }

@@ -1,10 +1,11 @@
 import './App.scss';
 
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import BeerItemList from './components/BeerItemList/BeerItemList';
-import { BEERS_PER_PAGE, PUNK_API_URL } from './constants/app.constants';
-import { BeerItemResponse } from './models/beer-item.interface';
+import TwoStateSwitch from './components/TwoStateSwitch/TwoStateSwitch';
+import { AlcoholByVolumeFilter } from './constants/filter.constants';
+import { fetchBeerList } from './helpers/requests';
 import { BeerItem } from './models/beer-item.model';
 
 const App = (): JSX.Element => {
@@ -12,27 +13,38 @@ const App = (): JSX.Element => {
     const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
-        console.warn('fetching');
-        fetch(`${PUNK_API_URL}?per_page=${BEERS_PER_PAGE}`)
-            .then(res => res.json() as Promise<BeerItemResponse[]>)
-            .then(
-                result => {
-                    setBeerItems(result.map(item => new BeerItem(item)));
-                    setIsLoaded(true);
-                },
-                error => console.error(error)
-            );
+        fetchBeerList().then(
+            beerItems => {
+                setBeerItems(beerItems);
+                setIsLoaded(true);
+            },
+            error => console.error(error)
+        );
     }, []);
+
+    const onFilterByAbvStateChange = (newState: string) => {
+        fetchBeerList(newState as AlcoholByVolumeFilter).then(
+            beerItems => setBeerItems(beerItems),
+            error => console.error(error)
+        );
+    }
 
     return (
         <>
             <header className="App-header">
-                <h1>Beer List</h1>
+                <h1>Beer List 🍻</h1>
             </header>
             <main>
+                <TwoStateSwitch
+                    switchLabel='Filter by ABV'
+                    stateValues={[AlcoholByVolumeFilter.Weak, AlcoholByVolumeFilter.Strong]}
+                    stateLabels={['Weak', 'Strong']}
+                    initialState={AlcoholByVolumeFilter.Weak}
+                    onStateChange={onFilterByAbvStateChange}
+                />
                 {isLoaded ? (
                     <BeerItemList items={beerItems} />
-                ) : <p>Loading beer items...</p>}
+                ) : <p className='App-loading-message'>Loading beer items...</p>}
             </main>
         </>
     );
