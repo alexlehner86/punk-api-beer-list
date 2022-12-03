@@ -1,0 +1,42 @@
+button.browseNext,
+button.browsePrevious {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    border-radius: 0.5rem;
+    color: var(--text-color);
+    font-size: 1rem;
+    padding: 0.3em 0.5em;
+
+    svg {
+        height: 2rem;
+        width: 2rem;
+    }
+
+    &:focus:not(:focus-visible) {
+        outline: none;
+    }
+    &:focus-visible {
+        outline: 0.25rem solid var(--primary-color-dark);
+    }
+
+    &:not(:disabled):hover,
+    &:focus-visible {
+        background: var(--canvas-bg-color);
+    }
+
+    &:disabled {
+        opacity: 0.5;
+    }
+}
+
+button.browseNext svg {
+    rotate: 180deg;
+}
+
+@media only screen and (max-width: 30rem) {
+    :is(button.browsePrevious, button.browseNext) span {
+        display: none;
+    }
+}

@@ -15,8 +15,12 @@ const BeerItemDetails: FunctionComponent<BeerItemDetailsProps> = ({ item }): JSX
         <div className={styles.flexRow}>
             <div className={styles.description}>
                 <p>{item.description}</p>
+                <p className={styles.infoItem}>
+                    🍺&nbsp;<span>Alcohol by Volume: </span>
+                    {item.abv}%
+                </p>
                 {item.foodPairing?.length > 0 ? (
-                    <p className={styles.foodPairing}>
+                    <p className={styles.infoItem}>
                         🍴&nbsp;<span>Food Pairing: </span>
                         {item.foodPairing[0]}
                     </p>
