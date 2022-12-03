@@ -33,6 +33,14 @@ header.App-header {
     }
 }
 
+div.App-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: min(90rem, 90vw);
+    margin: 0 auto;
+}
+
 .App-loading-message {
     text-align: center;
 }

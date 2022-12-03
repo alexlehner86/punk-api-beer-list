@@ -44,7 +44,10 @@ hgroup.heading {
             margin-bottom: 0;
         }
 
-        p.foodPairing span {
+        :where(p.infoItem) {
+            margin: 0.5em 0;
+        }
+        p.infoItem span {
             font-weight: bold;
         }
     }
