@@ -54,7 +54,9 @@ const App = (): JSX.Element => {
             </header>
             <main>
                 <div className="App-controls">
-                    <BrowseButton isDisabled={page === 1} isNext={false} onButtonClick={onBrowseFilterList} />
+                    <div className='App-control-wrapper'>
+                        <BrowseButton isDisabled={page === 1} isNext={false} onButtonClick={onBrowseFilterList} />
+                    </div>
                     <TwoStateSwitch
                         switchLabel='Filter by ABV'
                         stateValues={[AlcoholByVolumeFilter.Weak, AlcoholByVolumeFilter.Strong]}
@@ -62,7 +64,9 @@ const App = (): JSX.Element => {
                         initialState={AlcoholByVolumeFilter.Weak}
                         onStateChange={onFilterByAbvStateChange}
                     />
-                    <BrowseButton isDisabled={false} isNext={true} onButtonClick={onBrowseFilterList} />
+                    <div className='App-control-wrapper align-right'>
+                        <BrowseButton isDisabled={false} isNext={true} onButtonClick={onBrowseFilterList} />
+                    </div>
                 </div>
                 {isLoaded ? (
                     <BeerItemList items={beerItems} />
