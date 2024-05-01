@@ -1,0 +1,42 @@
+[
+    {
+        "id": 10,
+        "name": "Brewdog Punk AF",
+        "tagline": "Citrus. Grassy. A tad bitter. And (almost) no alcohol included. How refreshing!",
+        "abv": 0.5,
+        "description": "This is Punk AF. Juicy tropical fruit mixes it up with grassy, pine notes on a solid malt baseline for a beer that’s all flavour, no alcohol. At 0.5% ABV, it's Punk, but not as you know it.",
+        "food_pairing": ["Sea Food"]
+    },
+    {
+        "id": 11,
+        "name": "Brewdog Lost Lager",
+        "tagline": "Lager Like it should be.",
+        "abv": 4.5,
+        "description": "Lager is one hell of a beer if you make it right. Lost Lager takes back the ground lost over decades by lager monoliths. This is a dry-hopped Pilsner made with classic German Saphir hops, giving vibrant citrus and stone-fruit notes.",
+        "food_pairing": ["Chicken", "Sea Food"]
+    },
+    {
+        "id": 12,
+        "name": "Brewdog Wingman",
+        "tagline": "By. Your. Side",
+        "abv": 4.3,
+        "description": "A maverick of a Session IPA, this is a smooth ride of mellow tropical fruits, piney notes and a sharp citrus aroma. Refreshing, infinitely drinkable and with a steady boozing altitude of 4.3%, you’ll want to keep Wingman by your side all night long. Prepare ground control. Refreshment incoming.",
+        "food_pairing": ["Very Spicy Curry"]
+    },
+    {
+        "id": 13,
+        "name": "Brewdog Black Heart",
+        "tagline": "Coffee. Chocolate. Roasty.",
+        "abv": 4.1,
+        "description": "There’s a new stout in town, and it’s demanding your attention. Chocolate and extra dark crystal malts give layers of roasted, toasted coffee and cocoa, with a hint of caramel coming through. ",
+        "food_pairing": ["Venison Stew"]
+    },
+    {
+        "id": 14,
+        "name": "Brewdog Dead Pony Club",
+        "tagline": "Ride that Pony.",
+        "abv": 3.8,
+        "description": "Strong notes of manderine and grapefruit can be detected in the aroma. Fruity aromatic hops and a dry, bitter finish are convincing on the palate.",
+        "food_pairing": ["Sea Food"]
+    }
+]

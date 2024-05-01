@@ -1,0 +1,42 @@
+[
+    {
+        "id": 21,
+        "name": "Brewdog Punk IPA",
+        "tagline": "The absolute Post Modern Classic. For any and all beery occasions.",
+        "abv": 5.4,
+        "description": "Punk IPA is the beer that kick-started the craft beer revolution. This light, golden classic has been subverted with new world hops to create an explosion of flavour.",
+        "food_pairing": ["Spicy Curry", "Fish Tacos"]
+    },
+    {
+        "id": 22,
+        "name": "Brewdog Hazy Jane",
+        "tagline": "The Best New England IPA.",
+        "abv": 5,
+        "description": "Brewed with oats and wheat and left unfiltered for a hazy appearance and super smooth delivery. Dry-hopped for a full-tilt fruit hit with pineapple, mango and a hint of zesty lime.",
+        "food_pairing": ["Fish Tacos"]
+    },
+    {
+        "id": 23,
+        "name": "Brewdog DOG C",
+        "tagline": "Very very dark, like your soul! Dark as the night on a new moon!",
+        "abv": 15.1,
+        "description": "Brewed for the 7th anniversary of BrewDog. Espresso, dark chocolate and chili on the nose. Spicy hop flavor, caramel and cocoa on the palate.",
+        "food_pairing": ["Dark chocolate cakes"]
+    },
+    {
+        "id": 24,
+        "name": "Brewdog Black Jacques",
+        "tagline": "So dark and tasty!",
+        "abv": 11.1,
+        "description": "In the glass, this Black Saison has a deep black color with red reflections. The aroma is reminiscent of chocolate and red wine with minty freshness and notes of cola herb. On the palate, it is very complex, sweet and slightly alcoholic. The warming finish is accompanied by notes of brandy and espresso.",
+        "food_pairing": ["Venison Stew"]
+    },
+    {
+        "id": 25,
+        "name": "Brewdog King Crush",
+        "tagline": "Crush your Thirst.",
+        "abv": 8.4,
+        "description": "A strong Double Milkshake IPA with notes of mango and passion fruit.",
+        "food_pairing": ["Stuff"]
+    }
+]
