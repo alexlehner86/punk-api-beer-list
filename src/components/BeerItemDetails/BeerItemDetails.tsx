@@ -26,7 +26,7 @@ const BeerItemDetails: FunctionComponent<BeerItemDetailsProps> = ({ item }): JSX
                     </p>
                 ) : null}
             </div>
-            <img src={item.imageUrl} alt=""></img>
+            <img src="/punk-api-beer-list/img/beer-bottle.png" alt=""></img>
         </div>
     </>
 );

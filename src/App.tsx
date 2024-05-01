@@ -69,7 +69,14 @@ const App = (): JSX.Element => {
                     </div>
                 </div>
                 {isLoaded ? (
-                    <BeerItemList items={beerItems} />
+                    <>
+                        <BeerItemList items={beerItems} />
+                        <div className="attribution">
+                            <a href="https://www.vecteezy.com/free-vector/beer-bottle-icon">
+                                Beer Bottle Icon Vectors by Vecteezy
+                            </a>
+                        </div>
+                    </>
                 ) : <p className='App-loading-message'>Loading beer items...</p>}
             </main>
         </>

@@ -52,3 +52,14 @@ div.App-controls {
 .App-loading-message {
     text-align: center;
 }
+
+div.attribution {
+    display: grid;
+    place-content: center;
+    padding: 1rem;
+
+    a[href] {
+        color: rgb(65, 65, 65);
+        font-size: 0.9rem;
+    }
+}

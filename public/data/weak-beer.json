@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "abv": 5.4,
+        "description": "Punk IPA is the beer that kick-started the craft beer revolution. This light, golden classic has been subverted with new world hops to create an explosion of flavour.",
+        "food_pairing": ["Spicy Curry", "Fish Tacos"],
+        "image_url": "",
+        "name": "Punk IPA",
+        "tagline": "Post Modern Classic. For any and all beery occasions."
+    },
+    {
+        "id": 2,
+        "abv": 4.5,
+        "description": "Lager is one hell of a beer if you make it right. Lost Lager takes back the ground lost over decades by lager monoliths. This is a dry-hopped Pilsner made with classic German Saphir hops, giving vibrant citrus and stone-fruit notes.",
+        "food_pairing": ["Chicken", "Sea Food"],
+        "image_url": "",
+        "name": "Lost Lager",
+        "tagline": "Lager Like it should be."
+    }
+]
