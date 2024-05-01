@@ -1,4 +1,3 @@
-import { BEERS_PER_PAGE } from '../constants/app.constants';
 import { AlcoholByVolumeFilter } from '../constants/filter.constants';
 import { BeerItemResponse } from '../models/beer-item.interface';
 import { BeerItem } from '../models/beer-item.model';
@@ -6,7 +5,7 @@ import { BeerItem } from '../models/beer-item.model';
 /**
 * Fetches list of beers from a local json file
 */
-export const fetchBeerList = (page = 1, abvFilter = AlcoholByVolumeFilter.Weak, itemsPerPage = BEERS_PER_PAGE): Promise<BeerItem[]> => {
+export const fetchBeerList = (abvFilter = AlcoholByVolumeFilter.Weak): Promise<BeerItem[]> => {
     const jsonFile = abvFilter === AlcoholByVolumeFilter.Weak ? 'weak-beer.json' : 'strong-beer.json';
     const headers = new Headers({
         'Accept': 'application/json'

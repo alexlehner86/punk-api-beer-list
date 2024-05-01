@@ -4,18 +4,24 @@ import { BeerItemResponse } from './beer-item.interface';
  * Beer items with reduced info based on the Punk API.
  */
 export class BeerItem {
-    /** e.g. "Buzz" */
+    /**
+     * @example "Buzz"
+     */
     public name: string;
-    /** e.g. "A Real Bitter Experience." */
+    /**
+     * @example "A Real Bitter Experience."
+     */
     public tagline: string;
-    /** e.g. "A light; crisp and bitter IPA brewed with English and American hops. A ..." */
+    /**
+     * @example "A light; crisp and bitter IPA brewed with English and American hops. A ..."
+     */
     public description: string;
     /**
      * Alcohol By Volume: standard measurement to assess the strength of a particular beer;
-     * e.g. 4.5
+     * @example 4.5
      */
     public abv: number;
-    /** e.g. "Spicy chicken tikka masala" */
+    /** @example "Spicy chicken tikka masala" */
     public foodPairing: string[];
 
     private _id: number;
