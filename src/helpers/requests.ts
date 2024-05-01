@@ -10,7 +10,7 @@ export const fetchBeerList = (abvFilter = AlcoholByVolumeFilter.Weak): Promise<B
     const headers = new Headers({
         'Accept': 'application/json'
       });
-    return fetch(`/data/${jsonFile}`, { headers })
+    return fetch(`/punk-api-beer-list/data/${jsonFile}`, { headers })
         .then(res => res.json() as Promise<BeerItemResponse[]>)
         .then(items => items.map(item => new BeerItem(item)));
 };
