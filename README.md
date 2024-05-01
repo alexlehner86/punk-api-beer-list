@@ -1,6 +1,8 @@
 # Punk API Beer List
 
-React demo that lists beers loaded from public [Punk API](https://punkapi.com/documentation/v2). Check out the [live version on GitHub Pages](https://alexlehner86.github.io/punk-api-beer-list/).
+React demo that shows a list of beers, using the CSS subgrid feature. Check out the [live version on GitHub Pages](https://alexlehner86.github.io/punk-api-beer-list/).
+
+Originally, the beer list was loaded from the public [Punk API](https://punkapi.com/documentation/v2). But after the API shut down on May 1st 2024, I changed the demo to load data from local JSON files.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

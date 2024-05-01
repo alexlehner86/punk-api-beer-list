@@ -7,13 +7,10 @@ import TwoStateSwitch from './components/TwoStateSwitch/TwoStateSwitch';
 import { AlcoholByVolumeFilter } from './constants/filter.constants';
 import { fetchBeerList } from './helpers/requests';
 import { BeerItem } from './models/beer-item.model';
-import BrowseButton from './components/BrowseButton/BrowseButton';
 
 const App = (): JSX.Element => {
-    const [alcoholByVolume, setAlcoholByVolume] = useState(AlcoholByVolumeFilter.Weak);
     const [beerItems, setBeerItems] = useState<BeerItem[]>([]);
     const [isLoaded, setIsLoaded] = useState(false);
-    const [page, setPage] = useState(1);
 
     useEffect(() => {
         fetchBeerList().then(
@@ -25,26 +22,11 @@ const App = (): JSX.Element => {
         );
     }, []);
 
-    const onBrowseFilterList = (pageIncrement: number): void => {
-        const newPage = page + pageIncrement;
-        fetchBeerList(newPage, alcoholByVolume).then(
-            beerItems => {
-                setBeerItems(beerItems);
-                setPage(newPage);
-            },
-            error => console.error(error)
-        );
-    }
-
     const onFilterByAbvStateChange = (newState: string): void => {
-        fetchBeerList(1, newState as AlcoholByVolumeFilter).then(
-            beerItems => {
-                setBeerItems(beerItems);
-                setPage(1);
-            },
+        fetchBeerList(newState as AlcoholByVolumeFilter).then(
+            beerItems => setBeerItems(beerItems),
             error => console.error(error)
         );
-        setAlcoholByVolume(newState as AlcoholByVolumeFilter);
     }
 
     return (
@@ -54,9 +36,6 @@ const App = (): JSX.Element => {
             </header>
             <main>
                 <div className="App-controls">
-                    <div className='App-control-wrapper'>
-                        <BrowseButton isDisabled={page === 1} isNext={false} onButtonClick={onBrowseFilterList} />
-                    </div>
                     <TwoStateSwitch
                         switchLabel='Filter by ABV'
                         stateValues={[AlcoholByVolumeFilter.Weak, AlcoholByVolumeFilter.Strong]}
@@ -64,12 +43,21 @@ const App = (): JSX.Element => {
                         initialState={AlcoholByVolumeFilter.Weak}
                         onStateChange={onFilterByAbvStateChange}
                     />
-                    <div className='App-control-wrapper align-right'>
-                        <BrowseButton isDisabled={false} isNext={true} onButtonClick={onBrowseFilterList} />
-                    </div>
                 </div>
                 {isLoaded ? (
-                    <BeerItemList items={beerItems} />
+                    <>
+                        <BeerItemList items={beerItems} />
+                        <div className="attribution">
+                            <p>
+                                Disclaimer: This website is a demo project to demonstrate various web features like, e.g.,
+                                subgrids. It is not endorsed nor does it officially represent BrewDog PLC. Most product names
+                                and descriptions are copied from www.brewdog.com
+                            </p>
+                            <a href="https://www.vecteezy.com/free-vector/beer-bottle-icon" target="_blank" rel="noreferrer">
+                                Beer Bottle Icon Vectors by Vecteezy
+                            </a>
+                        </div>
+                    </>
                 ) : <p className='App-loading-message'>Loading beer items...</p>}
             </main>
         </>

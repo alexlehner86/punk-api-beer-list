@@ -34,21 +34,25 @@ header.App-header {
 }
 
 div.App-controls {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    display: flex;
+    justify-content: center;
     max-width: min(90rem, 90vw);
     margin: 0 auto;
-
-    div.App-control-wrapper {
-        display: flex;
-        align-items: center;
-
-        &.align-right {
-            justify-content: flex-end;
-        }
-    }
 }
 
 .App-loading-message {
     text-align: center;
+}
+
+div.attribution {
+    display: grid;
+    place-content: center;
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 1rem;
+
+    a[href] {
+        color: rgb(65, 65, 65);
+        font-size: 0.9rem;
+    }
 }

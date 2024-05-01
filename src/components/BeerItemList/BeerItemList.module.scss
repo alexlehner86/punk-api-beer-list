@@ -17,10 +17,17 @@ ul.beerGrid {
     }
 
     li {
+        --bg-start: #f9be29;
+        --bg-end: #f0b111;
         background: var(--canvas-bg-color);
         border: 0.125rem solid black;
         border-radius: 0.25rem;
         box-shadow: 10px 10px 15px -5px rgba(196, 149, 32, 0.7);
+
+        &:nth-child(even) {
+            --bg-start: #f96c30;
+            --bg-end: #bf440f;
+        }
     }
 }
 
